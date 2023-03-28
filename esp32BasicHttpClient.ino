@@ -66,7 +66,7 @@ void setup() {
         delay(1000);
     }
 
-    wifiMulti.addAP("SSID", "PASSWORD");
+    wifiMulti.addAP(SSID, PASSWORD);
 
 }
 
@@ -79,7 +79,8 @@ void loop() {
         USE_SERIAL.print("[HTTP] begin...\n");
         // configure traged server and url
         //http.begin("https://www.howsmyssl.com/a/check", ca); //HTTPS
-        http.begin("http://example.com/index.html"); //HTTP
+//        http.begin("http://example.com/index.html"); //HTTP
+http.begin("https://worldtimeapi.org/api/timezone/america/denver"); //HTTP
 
         USE_SERIAL.print("[HTTP] GET...\n");
         // start connection and send HTTP header
